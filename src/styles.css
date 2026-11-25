@@ -1,1 +1,156 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   Global Styles & Design Tokens
+   ========================================================================== */
+:root {
+  --purple-dark: rgb(20, 5, 35);
+  --purple-deep: rgb(45, 10, 66);
+  --purple-main: rgb(107, 32, 137);
+  --purple-light: rgb(191, 71, 255);
+  --purple-pink: rgb(255, 93, 218);
+  --cyber-cyan: rgb(80, 235, 255);
+  --text-light: rgb(248, 231, 255);
+  --text-muted: rgb(203, 170, 218);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text-light);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(191, 71, 255, 0.3),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(255, 93, 218, 0.2),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      var(--purple-dark),
+      rgb(59, 13, 82),
+      rgb(105, 25, 135)
+    );
+}
+
+/* ==========================================================================
+   Angular Root & Ambient Cyber Grid
+   ========================================================================== */
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+app-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(255, 93, 218, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 235, 255, 0.3) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ==========================================================================
+   Layout & Shared Routed Containers (Professor's Architecture)
+   ========================================================================== */
+section {
+  margin: 26px 0;
+}
+
+/* Page container, shared by every routed page */
+.resume {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 32px;
+}
+
+/* ==========================================================================
+   Typography & Shared Component Headings
+   ========================================================================== */
+.section-title {
+  position: relative;
+  margin: 0 0 20px;
+  padding-bottom: 6px;
+  color: rgb(255, 196, 255);
+  border-bottom: 1px solid rgba(255, 93, 218, 0.7);
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 0 8px rgba(255, 93, 218, 0.8),
+    0 0 16px rgba(191, 71, 255, 0.6);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin-top: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--cyber-cyan),
+    var(--purple-pink)
+  );
+  box-shadow:
+    0 0 8px var(--cyber-cyan),
+    0 0 12px var(--purple-pink);
+}
+
+p {
+  color: rgb(245, 225, 255);
+}
+
+a {
+  color: var(--cyber-cyan);
+  text-decoration: none;
+  text-shadow: 0 0 7px rgba(80, 235, 255, 0.7);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: rgb(255, 170, 255);
+  text-shadow: 0 0 10px rgba(255, 170, 255, 0.8);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 600px) {
+  section {
+    margin: 20px 0;
+  }
+
+  .resume {
+    margin: 24px auto;
+    padding: 0 18px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+}

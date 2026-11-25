@@ -1,0 +1,153 @@
+/* Full-page reset */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: rgb(245, 232, 255);
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(191, 71, 255, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(255, 93, 218, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      rgb(20, 5, 35),
+      rgb(55, 12, 78),
+      rgb(104, 25, 135)
+    );
+  font-family: "Courier New", monospace;
+}
+
+/* Angular root and main layout */
+app-root,
+.page,
+.container,
+main {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Full purple content area */
+.page,
+.container,
+main {
+  padding: 40px 8%;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(35, 8, 55, 0.94),
+      rgba(91, 20, 119, 0.86)
+    );
+}
+
+/* Make headings readable */
+h1,
+h2,
+h3 {
+  color: rgb(255, 170, 255);
+  text-shadow: 0 0 12px rgba(255, 93, 218, 0.7);
+}
+
+/* Full-width interaction panel */
+.interaction-message,
+.angular-message {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 5px solid rgb(255, 93, 218);
+  border-radius: 0 10px 10px 0;
+  color: rgb(255, 240, 255);
+  background: rgba(25, 5, 42, 0.7);
+  box-shadow:
+    0 0 20px rgba(191, 71, 255, 0.28),
+    inset 0 0 18px rgba(255, 93, 218, 0.08);
+}
+
+/* Purple full-width table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(25, 5, 42, 0.72);
+  border: 1px solid rgb(191, 71, 255);
+  box-shadow: 0 0 25px rgba(191, 71, 255, 0.3);
+}
+
+th {
+  padding: 16px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(91, 20, 119),
+    rgb(168, 45, 190)
+  );
+  text-align: left;
+  letter-spacing: 0.12em;
+}
+
+td {
+  padding: 16px;
+  color: rgb(248, 225, 255);
+  border-bottom: 1px solid rgba(255, 170, 255, 0.25);
+}
+
+tbody tr:hover {
+  background: rgba(191, 71, 255, 0.2);
+}
+
+/* Full-width footer */
+.copyright {
+  width: 100%;
+  min-height: 150px;
+  box-sizing: border-box;
+  margin: 60px 0 0;
+  padding: 38px 20px;
+  color: rgb(245, 232, 255);
+  background:
+    linear-gradient(
+      135deg,
+      rgb(18, 3, 32),
+      rgb(66, 12, 91),
+      rgb(126, 29, 155)
+    );
+  border-top: 2px solid rgb(255, 93, 218);
+  text-align: center;
+  letter-spacing: 0.1em;
+  box-shadow:
+    0 -10px 35px rgba(255, 93, 218, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Footer cyber grid */
+.copyright::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 22px;
+  margin-bottom: 18px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgb(80, 235, 255),
+      rgb(255, 93, 218),
+      transparent
+    );
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgb(255, 93, 218);
+}

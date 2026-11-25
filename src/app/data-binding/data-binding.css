@@ -1,0 +1,138 @@
+h1 {
+  margin-bottom: 0;
+  color: rgb(255, 196, 255);
+  text-shadow:
+    0 0 8px rgba(255, 93, 218, 0.8),
+    0 0 16px rgba(191, 71, 255, 0.6);
+}
+
+.lead {
+  color: rgb(245, 225, 255);
+}
+
+.demo {
+  padding: 4px 20px 16px;
+  border: 1px solid rgb(174, 70, 210);
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 10, 66, 0.9),
+    rgba(83, 20, 108, 0.88)
+  );
+  box-shadow:
+    0 0 20px rgba(191, 71, 255, 0.2),
+    inset 0 0 18px rgba(255, 93, 218, 0.06);
+}
+
+.demo code {
+  color: rgb(80, 235, 255);
+  text-transform: none;
+  text-shadow: 0 0 7px rgba(80, 235, 255, 0.6);
+}
+
+.hint {
+  color: rgb(203, 170, 218);
+  font-size: 0.9rem;
+}
+
+progress {
+  width: 100%;
+  height: 18px;
+  accent-color: rgb(255, 93, 218);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  border: 1px solid rgba(255, 93, 218, 0.7);
+  border-radius: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(
+    135deg,
+    rgb(107, 32, 137),
+    rgb(191, 71, 255)
+  );
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(191, 71, 255, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.12);
+  box-shadow:
+    0 0 14px rgba(255, 93, 218, 0.65),
+    0 0 20px rgba(80, 235, 255, 0.3);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  border-color: rgba(203, 170, 218, 0.25);
+  background: rgba(70, 16, 96, 0.45);
+  color: rgba(203, 170, 218, 0.5);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: rgb(248, 231, 255);
+  font-weight: bold;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid rgba(191, 71, 255, 0.55);
+  border-radius: 6px;
+  background: rgba(20, 5, 35, 0.85);
+  color: rgb(248, 231, 255);
+  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgb(80, 235, 255);
+  box-shadow: 0 0 10px rgba(80, 235, 255, 0.45);
+}
+
+.preview {
+  margin-top: 16px;
+  padding: 4px 16px;
+  border-left: 4px solid rgb(255, 93, 218);
+  border-radius: 0 6px 6px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(126, 29, 155, 0.85),
+    rgba(70, 16, 96, 0.65)
+  );
+  box-shadow: 0 0 14px rgba(255, 93, 218, 0.18);
+}
+
+.preview-label {
+  margin-bottom: 0;
+  color: rgb(80, 235, 255);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 7px rgba(80, 235, 255, 0.65);
+}
